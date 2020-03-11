@@ -145,10 +145,7 @@ h1 {
 .info {
   margin-top: 104px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  grid-template-columns: 1fr 1fr; }
   @media screen and (max-width: 768px) {
     .info {
       grid-template-columns: 1fr; } }
@@ -262,28 +259,29 @@ h1 {
 .consultation__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   margin-top: 75px; }
   @media screen and (max-width: 768px) {
     .consultation__container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      justify-items: center; } }
 
 .consultation__description {
   max-width: 413px;
   padding-bottom: 50px; }
-  @media screen and (max-width: 768px) {
-    .consultation__description {
-      -ms-flex-item-align: center;
-          align-self: center; } }
 
 .consultation__description-title {
   color: #0075ff;
   font-size: 24px; }
 
 .consultation__form {
-  max-width: 413px; }
+  max-width: 413px;
+  justify-self: self-end; }
+  @media screen and (max-width: 768px) {
+    .consultation__form {
+      justify-self: center; } }
 
 .consultation__form-input {
   width: 100%;
@@ -385,10 +383,15 @@ h1 {
           justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .contacts__container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      justify-items: center; } }
 
-.contacts__contacts__info {
-  max-width: 413px; }
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 413px;
+  padding-bottom: 40px; }
 
 .contacts__form {
   max-width: 413px; }
@@ -439,11 +442,6 @@ h1 {
   margin-top: 8px;
   margin-bottom: 24px; }
 
-.contacts__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .contacts__phone-email {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%; }
@@ -459,13 +457,19 @@ h1 {
   background-image: url(../images/footer.jpg);
   background-size: cover;
   background-position: center; }
-  .footer:before {
-    content: "";
-    width: 115px;
-    height: 76px;
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
     bottom: 40px;
-    left: 50%;
+    width: 100%; }
+  .footer__logo {
+    width: 115px;
+    height: 76px;
     background-image: url(../images/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
