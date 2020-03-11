@@ -394,7 +394,11 @@ h1 {
   padding-bottom: 40px; }
 
 .contacts__form {
-  max-width: 413px; }
+  max-width: 413px;
+  justify-self: self-end; }
+  @media screen and (max-width: 768px) {
+    .contacts__form {
+      justify-self: center; } }
 
 .contacts__form-input {
   width: 100%;
