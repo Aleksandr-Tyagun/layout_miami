@@ -152,8 +152,7 @@ h1 {
     position: relative;
     cursor: pointer;
     color: white;
-    font-size: 19px;
-    z-index: 3; }
+    font-size: 19px; }
     @media screen and (max-width: 480px) {
       .header__label {
         display: block; } }
@@ -231,6 +230,10 @@ h1 {
       color: #9fadc2; }
   .header__toggle {
     display: none; }
+  .header__label-cross {
+    position: absolute;
+    top: 40px;
+    right: 23px; }
   .header__toggle:checked + .header__menu {
     display: block; }
 
