@@ -157,14 +157,16 @@ h1 {
       .header__label {
         display: block; } }
   .header__menu {
-    display: none;
+    opacity: 0;
     height: 100vh;
     width: 100vw;
     position: fixed;
     background-color: #0075ff;
     top: 0;
     left: 0;
-    z-index: 1; }
+    z-index: 1;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms; }
   .header__menu-container {
     margin-top: 120px;
     padding: 21px;
@@ -235,7 +237,7 @@ h1 {
     top: 40px;
     right: 23px; }
   .header__toggle:checked + .header__menu {
-    display: block; }
+    opacity: 1; }
 
 .nav {
   color: black;
