@@ -183,7 +183,8 @@ h1 {
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    margin-left: 4px; }
   .header__menu-logo {
     width: 115px;
     height: 76px;
