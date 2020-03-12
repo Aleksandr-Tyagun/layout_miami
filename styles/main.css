@@ -5,7 +5,8 @@ li,
 button,
 input,
 textarea,
-p {
+p,
+h1 {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
@@ -70,6 +71,7 @@ h1 {
       .header__top {
         width: calc(100% - 40px); } }
   .header__logo {
+    display: block;
     width: 115px;
     height: 76px;
     background-image: url(../images/logo.png);
@@ -98,7 +100,8 @@ h1 {
     font-size: 60px;
     color: white;
     letter-spacing: -1.5px;
-    line-height: 1; }
+    line-height: 1;
+    width: 328px; }
     @media screen and (max-width: 900px) {
       .header__text {
         font-size: 48px; } }
@@ -126,10 +129,114 @@ h1 {
       color: #9fadc2; }
     @media screen and (max-width: 480px) {
       .header__link {
-        opacity: 0; } }
-  @media screen and (max-width: 480px) {
-    .header__phone::after {
-      content: ""; } }
+        display: none; } }
+  .header__phone-number {
+    display: block; }
+    @media screen and (max-width: 480px) {
+      .header__phone-number {
+        display: none; } }
+  .header__phone-link {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 16px; }
+  .header__phone-icon {
+    display: none;
+    padding-left: 5px;
+    cursor: pointer; }
+    @media screen and (max-width: 480px) {
+      .header__phone-icon {
+        display: block; } }
+  .header__label {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 19px;
+    z-index: 3; }
+    @media screen and (max-width: 480px) {
+      .header__label {
+        display: block; } }
+  .header__menu {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0075ff;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .header__menu-container {
+    margin-top: 120px;
+    padding: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .header__menu-logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .header__menu-logo {
+    width: 115px;
+    height: 76px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 40px;
+    width: 100%; }
+    @media screen and (max-width: 900px) {
+      .header__menu-logo {
+        width: 77px;
+        height: 50px; } }
+  .header__menu-number {
+    position: absolute;
+    bottom: 70px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 2px; }
+  .header__menu-action-container {
+    position: absolute;
+    display: inline;
+    bottom: 35px; }
+  .header__menu-action {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    border-radius: 1px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 2px; }
+    .header__menu-action:hover {
+      color: #9fadc2; }
+  .header__menu-link {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 32px;
+    padding-bottom: 5px;
+    text-transform: uppercase; }
+    .header__menu-link:last-child {
+      margin-bottom: 48px; }
+    .header__menu-link:hover {
+      color: #9fadc2; }
+  .header__toggle {
+    display: none; }
+  .header__toggle:checked + .header__menu {
+    display: block;
+    position: fixed; }
 
 .nav {
   color: black;
@@ -246,6 +353,10 @@ h1 {
   @media screen and (max-width: 480px) {
     .gallery__title-decoration {
       margin-bottom: 35px; } }
+
+.gallery__hotel-location {
+  display: inline;
+  font-style: normal; }
 
 .gallery__photos {
   display: grid;
@@ -388,7 +499,7 @@ h1 {
           box-sizing: border-box; }
 
 .consultation__form-submit {
-  margin-top: 32px;
+  margin-top: 16px;
   width: 100%;
   padding: 21px 0;
   background-color: #0075ff;
@@ -515,6 +626,13 @@ h1 {
   padding-bottom: 40px;
   line-height: 27px; }
 
+.contacts__info-email {
+  color: black;
+  text-decoration: none; }
+
+.contacts__info-address {
+  font-style: normal; }
+
 .contacts__form {
   max-width: 413px;
   justify-self: self-end; }
@@ -535,12 +653,16 @@ h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.contacts__phone-link {
+  text-decoration: none;
+  color: black; }
+
 .contacts__form-input--textarea {
   resize: none;
   height: auto; }
 
 .contacts__form-submit {
-  margin-top: 32px;
+  margin-top: 16px;
   width: 100%;
   padding: 21px 0;
   background-color: #0075ff;
@@ -602,6 +724,7 @@ h1 {
     bottom: 40px;
     width: 100%; }
   .footer__logo {
+    display: block;
     width: 115px;
     height: 76px;
     background-image: url(../images/logo.png);
